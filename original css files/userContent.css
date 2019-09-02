@@ -1,0 +1,6 @@
+/* Dark scrollbar (webpages only) */
+@namespace url("http://www.w3.org/1999/xhtml");
+
+:root{
+  scrollbar-color: #474749 #323435 !important;
+}
