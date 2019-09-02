@@ -1,0 +1,32 @@
+/* Credit to: https://www.reddit.com/r/FirefoxCSS/comments/c0fqg8/minimal_ui_and_safarilike_tabs/ */
+
+/* Position titlebar */
+#titlebar {
+    -moz-box-ordinal-group: 1 !important;
+    visibility: collapse !important;
+}
+  
+/* Position navbar and pad to make room for window buttons & tts sidebar */
+#nav-bar {
+    -moz-box-ordinal-group: 2 !important;
+    padding-left: 40px !important;
+    padding-right: 100px !important;
+    padding-top: 30px !important;
+    margin-top: -25px !important;
+}
+
+/* Position bookmark bar */
+#PersonalToolbar {
+    -moz-box-ordinal-group: 3 !important;
+    padding-left: 50px !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    -moz-window-dragging: drag;
+}
+
+/* Position window buttons */
+.titlebar-buttonbox-container {
+    position: absolute;
+    top: -1vh;
+    right: .5vw;
+}

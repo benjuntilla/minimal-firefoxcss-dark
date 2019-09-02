@@ -1,0 +1,10 @@
+/* Style active tab blue bar */
+.tabbrowser-tab {
+	--tab-line-color: #323234 !important;
+}
+/* Active tab color */
+.tab-background[selected="true"] {
+    background-attachment: none !important;
+    background-color: #525254 !important;
+    background-image: none !important;
+}

@@ -1,0 +1,46 @@
+/* Disable white flash on page load */
+browser[type="content-primary"], tabbrowser tabpanels, #appcontent > #content {
+	background-color: #323234 !important;
+}
+
+/* Fix white flash during page load */
+tabpanels{
+    background-color: #323234 !important;
+}
+
+/* Titlebar/button color */
+toolbar#TabsToolbar {
+    -moz-appearance: none !important;
+    background-color: #323234 !important;
+}
+
+
+/* Search suggestions color */
+panel[type="autocomplete"],
+panel[type="autocomplete-richlistbox"],
+.autocomplete-history-popup {
+    background: #464648 !important;
+    border: #464648 !important;
+}
+.search-panel-header, .autocomplete-tree
+{
+	color: #aaa !important;
+}
+
+/* Remove blue border around url/search bars */
+#urlbar, .searchbar-textbox {
+    border: none !important;
+}
+
+/* Style dialog popups */
+@-moz-document url("chrome://global/content/commonDialog.xul"){
+	#commonDialog {
+		background-color: #323234 !important;
+		color: #aaa !important;
+    }
+}
+
+/* Dark panel scrollbar (Dark webpage scrollbar is in usercontent)*/
+#bookmarksPanel, #history-panel {
+	scrollbar-color: #838384 #454545 !important;
+}

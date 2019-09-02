@@ -1,0 +1,17 @@
+menuitem:not([disabled=true]), menu {
+    color: #aaa !important
+}
+menuitem[disabled=true] {
+    color: #222 !important;
+}
+#context-navigation {
+    background-color: #323234 !important;
+}
+menuseparator {
+    display: none !important;
+}
+menupopup {
+    -moz-appearance: none !important;
+    border: 1px #464646 solid !important;
+    background-color: #323234 !important;
+}

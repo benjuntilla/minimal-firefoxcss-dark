@@ -1,0 +1,102 @@
+/* Contextual toolbar buttons, only show on hover, this is what matters, the rest of the file are just style tweaks I like */
+:root:not([customizing]) #nav-bar toolbarbutton {
+    margin-left: -28px !important;
+    opacity: 0 !important;
+    transform: scale(.85, .85) !important;
+    pointer-events: none !important;
+    transition: all 100ms var(--animation-easing-function) !important;
+}
+  
+  :root:not([customizing]) :hover > #nav-bar toolbarbutton,
+  :root:not([customizing]) #navigator-toolbox:focus-within #nav-bar toolbarbutton,
+  :root:not([customizing]) :hover > #titlebar toolbarbutton {
+    transform: scale(1, 1) !important;
+    opacity:1 !important;
+    margin-left:0 !important;
+    pointer-events: auto !important;
+} 
+  
+/* Misc style tweaks */
+
+/* some experimentation with expanding tab on hover to see the title better, it's kinda stupid but I was just messing around, could be something useful in the future */
+/*
+.tabbrowser-tab:not([selected]):hover { 
+min-width: 300px !important;
+transition: min-width 150ms var(--animation-easing-function) 2s !important;
+}
+*/
+
+/* Remove borders everywhere, some code copied from edge style for firefox */
+:root {
+--tabs-border: transparent !important;
+}
+.tabbrowser-tab::after, .tabbrowser-tab::before {
+border-left: none !important;
+}
+#urlbar, .searchbar-textbox {
+border: none !important;
+box-shadow: none !important;
+}
+#nav-bar {
+    margin-top: 0px !important;
+    border-top: 0px !important;
+    box-shadow: none !important;
+}
+
+/* nav bar is semi opaque when unhovered */
+#nav-bar > * {
+opacity:0.5;
+transition: opacity 0.3s;
+}
+#nav-bar:hover > * {
+opacity:1 !important;
+}
+#urlbar {
+opacity:1 !important;
+}
+#urlbar .urlbar-input-box {
+opacity:1 !important;
+}
+#urlbar, .searchbar-textbox {
+    border: 0px !important;
+    height: 20px !important;
+}
+#urlbar {
+    margin-left: 1px !important;
+    margin-right: 1px !important;
+}
+.tab-background {
+    border-top: none !important;
+}
+.tabs-newtab-button, #new-tab-button, #alltabs-button {
+    color: rgba(240, 240, 240, 1);
+    border-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+window:not([chromehidden~="toolbar"]) #urlbar-container > .toolbarbutton-1:-moz-any([disabled], :not([open]):not([disabled]):not(:active)) > .toolbarbutton-icon[class], #main-window:not([customizing]) #back-button[disabled] > .toolbarbutton-icon[class] {
+    box-shadow: none !important;
+    border: 0px !important;
+}
+
+/* Only show close buttons on background tabs when hovering with the mouse (Credit to Timvde) */
+.tabbrowser-tab:not([selected]):not([pinned]) .tab-close-button {
+display: none !important;
+}
+
+.tabbrowser-tab:not([selected]):not([pinned]):hover .tab-close-button {
+display: -moz-box !important;
+}
+
+/* Underlines and dims unloaded tabs (Credit to josemam) */
+.tabbrowser-tab[pending] {
+font-style: italic;
+}
+toolbarspring {
+    min-width: 8px;
+    max-width: 8px;
+}
+
+/* Change tab max width */
+.tabbrowser-tab[fadein]:not([pinned]) {
+    max-width: 300px !important;
+}
