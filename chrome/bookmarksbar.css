@@ -2,11 +2,10 @@
 .toolbarbutton-text {
     color: #aaa !important;
 }
+.toolbarbutton-text { text-shadow: none !important; }
+/* .toolbarbutton-text { text-shadow: none !important; } */
 
 /* Remove black line below bookmarks bar */
-.tabbrowser-tab { text-shadow: none !important; }
-.toolbarbutton-text { text-shadow: none !important; }
-.toolbarbutton-text { color: #000000 !important; }
 #navigator-toolbox { border-bottom: 0px !important; }
 
 
