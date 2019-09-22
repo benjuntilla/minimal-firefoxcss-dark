@@ -1,0 +1,33 @@
+/* Style active tab blue bar */
+.tabbrowser-tab {
+	--tab-line-color: #323234 !important;
+}
+
+/* Active tab color */
+.tab-background[selected="true"] {
+    background-attachment: none !important;
+    background-color: #525254 !important;
+    background-image: none !important;
+}
+
+/* Only show close buttons on background tabs when hovering with the mouse (Credit to Timvde) */
+.tabbrowser-tab:not([selected]):not([pinned]) .tab-close-button {
+    display: none !important;
+}
+.tabbrowser-tab:not([selected]):not([pinned]):hover .tab-close-button {
+    display: -moz-box !important;
+}
+
+/* Underlines and dims unloaded tabs (Credit to josemam) */
+.tabbrowser-tab[pending] {
+    font-style: italic;
+}
+toolbarspring {
+    min-width: 8px;
+    max-width: 8px;
+}
+
+/* Change tab max width */
+.tabbrowser-tab[fadein]:not([pinned]) {
+    max-width: 300px !important;
+}

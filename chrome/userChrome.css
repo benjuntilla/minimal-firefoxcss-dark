@@ -1,0 +1,14 @@
+@import url(userChrome/colors.css);
+@import url(userChrome/misc.css);
+@import url(userChrome/findbar.css);
+@import url(userChrome/tabs.css);
+@import url(userChrome/sidepanel.css);
+@import url(userChrome/contextmenu.css);
+@import url(userChrome/bookmarksbar.css);
+@import url(userChrome/hamburgermenu.css);
+@import url(userChrome/navbar_responsive_minimal_design.css);
+@import url(userChrome/tst_sidebar.css);
+@import url(userChrome/tst_position_windowbuttons_and_toolbars.css);
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+@namespace html url(http://www.w3.org/1999/xhtml);

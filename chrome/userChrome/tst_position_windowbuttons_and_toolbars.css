@@ -5,7 +5,7 @@
     -moz-box-ordinal-group: 1 !important;
     visibility: collapse !important;
 }
-  
+
 /* Position navbar and pad to make room for window buttons & tts sidebar */
 #nav-bar {
     -moz-box-ordinal-group: 2 !important;

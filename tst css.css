@@ -1,66 +1,58 @@
 .tab.unread .label { font-weight: bold !important; }
 
-.tab:not(:hover) > .closebox {
-  display: none;
-}
+.tab:not(:hover) > .closebox { display: none; }
 
-.closebox:hover {
-  font-weight: 900;
-}
+.closebox:hover { font-weight: 900; }
 
 .tab, .tabs, body, #background {
-  background: #323234;
-  margin-top: 5px;
+	background: #323234;
+	margin-top: 1px;
 }
-.tab.unread .label { font-weight: bold !important; }
-
-.tab:not(:hover) > .closebox {
-  display: none;
-}
-
-.closebox:hover {
-  font-weight: 900;
-}
-
-.tab, .tabs, body, #background {
-  background: #323234;
-}
-
-
 
 
 /* Hide border on tab bar, force its state to 'scroll', adjust margin-left for width of scrollbar. */ 
 #tabbar { border: 0; overflow-y: scroll !important; margin-left: -10px !important; }
 
-/* Hide .twisty and adjust margins so favicons have 7px on left. */
-.tab .twisty {
+/* Hide new tab button when collapsed & adjust margins */
+body .newtab-button {
+	visibility: none;
+	opacity: 0;
+	transition: visibility 0s, opacity .5s linear;
+
+	margin-top: 5px;
+}
+body:hover .newtab-button {
+	visibility: visible;
+	opacity: 1;
+}
+
+/* Hide tab labels when collapsed */
+body .label {
+	visibility: none;
+	opacity: 0;
+	transition: visibility 0s, opacity .1s linear;
+}
+body:hover .label {
+	visibility: visible;
+	opacity: 1;
+}
+
+/* Hide .twisty & move favicons left when collapsed */
+body .tab .twisty {
 	visibility: hidden;
+	opacity: 0;
 	margin-left: -12px;
+	transition: display 0s, opacity .05s, linear;
+}
+body:hover .tab .twisty {
+	visibility: visible;
+	opacity: 1;
+	margin-left: 0px;
 }
 
-/* Push tab labels slightly to the right so they're completely hidden in collapsed state */
-.tab .label {
-	margin-left: 12px;
-}
-
-/* Hide close buttons on tabs. 
-.tab .closebox {
-	visibility: collapse;
-}
-
-/* Hide sound playing/muted button. */
-.sound-button::before {
-	display: none !important;
-}
-
-/* Hide 'new tab' button. 
-.newtab-button {
-	display: none;
-}
-
-/* ################################################ */
-/* ##### COLOR THEME ############################## */
-/* ################################################ */
+/* ####################### */
+/* ##### COLOR THEME #####*/
+/* ####################### */
 @keyframes spin {
 	0% {
 		transform: rotate(0deg);
@@ -90,6 +82,9 @@
 	border-right: 1px solid #1d1d1d;
 	box-shadow: none !important;
 }
+
+/* Commented to allow tree colored tabs to do its work */
+/*
 .tab {
 	background-color: transparent;
 	border-color: #292929;
@@ -114,7 +109,7 @@
 .tab.active:hover {
 	background-color: #525254 !important;
 }
-
+*/
 
 /* Adjust style for tab that has sound playing. */
 .tab.sound-playing .favicon::after {

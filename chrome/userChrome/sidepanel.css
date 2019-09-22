@@ -13,7 +13,7 @@
 }
 /* Thin splitter */
 #sidebar-splitter {
-  width: 1px !important;
+    width: 1px !important;
 }
 /* Dark sidebar searchbox (and resize) */
 #sidebar-search-container textbox {
@@ -29,5 +29,5 @@
 }
 /* Change folder icon color */
 .bookmark-item[container], treechildren::-moz-tree-image(container) {
- fill: #aaa !important;
+    fill: #aaa !important;
 }
