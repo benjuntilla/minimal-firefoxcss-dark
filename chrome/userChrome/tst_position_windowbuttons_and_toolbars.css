@@ -3,14 +3,14 @@
 /* Position titlebar */
 #titlebar {
     -moz-box-ordinal-group: 1 !important;
-    visibility: collapse !important;
+    margin-top: -30px !important;
 }
 
 /* Position navbar and pad to make room for window buttons & tts sidebar */
 #nav-bar {
     -moz-box-ordinal-group: 2 !important;
     padding-left: 40px !important;
-    padding-right: 100px !important;
+    padding-right: 75px !important;
     padding-top: 30px !important;
     margin-top: -25px !important;
 }
@@ -26,7 +26,5 @@
 
 /* Position window buttons */
 .titlebar-buttonbox-container {
-    position: absolute;
-    top: -1vh;
-    right: .5vw;
+    margin-bottom: -69px !important;
 }
