@@ -1,6 +1,6 @@
 /* Style text */
 .toolbarbutton-text {
-    color: #aaa !important;
+    color: var(--primary-light) !important;
 }
 .toolbarbutton-text { text-shadow: none !important; }
 /* .toolbarbutton-text { text-shadow: none !important; } */
@@ -30,4 +30,3 @@
     padding-top: 2px !important;
     padding-bottom: 2px !important;
 }
-  

@@ -1,0 +1,34 @@
+/* Menu font color */
+menuitem:not([disabled=true]), menu {
+    color: var(--primary-light) !important
+}
+menuitem[disabled=true] {
+    color: var(--secondary-light) !important;
+}
+
+/* Menu background color */
+popup-internal-box, panelview, panelmultiview, .panel-arrowcontent, scrollbox {
+    background-color: var(--primary-dark) !important;
+}
+
+/* Hide seperators */
+menuseparator {
+    display: none !important;
+}
+
+/* Menu items color */
+menu, menuitem {
+    background-color: var(--primary-dark) !important;
+}
+menu:hover, menuitem:hover {
+    background-color: var(--secondary-light) !important;
+}
+
+/* Panel footers color */
+.panel-subview-footer, .panel-footer > button {
+    background-color: var(--accent-dark) !important;
+    border: 0px !important;
+}
+.panel-subview-footer:hover, .panel-footer > button:hover {
+    background-color: var(--accent-light) !important;
+}

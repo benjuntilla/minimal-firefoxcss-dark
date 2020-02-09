@@ -1,19 +1,13 @@
-/* Disable white flash on page load */
+/* Prevent white flash on page load */
 browser[type="content-primary"], tabbrowser tabpanels, #appcontent > #content {
-	background-color: #323234 !important;
-}
-
-/* Fix white flash during page load */
-tabpanels{
-    background-color: #323234 !important;
+	background-color: var(--primary-dark) !important;
 }
 
 /* Titlebar/button color */
 toolbar#TabsToolbar {
     -moz-appearance: none !important;
-    background-color: #323234 !important;
+    background-color: var(--primary-dark) !important;
 }
-
 
 /* Search suggestions color */
 panel[type="autocomplete"],
@@ -24,7 +18,7 @@ panel[type="autocomplete-richlistbox"],
 }
 .search-panel-header, .autocomplete-tree
 {
-	color: #aaa !important;
+	color: var(--primary-light) !important;
 }
 
 /* Remove blue border around url/search bars */
@@ -35,12 +29,22 @@ panel[type="autocomplete-richlistbox"],
 /* Style dialog popups */
 @-moz-document url("chrome://global/content/commonDialog.xul"){
 	#commonDialog {
-		background-color: #323234 !important;
-		color: #aaa !important;
+		background-color: var(--primary-dark) !important;
+		color: var(--primary-light) !important;
     }
 }
 
 /* Dark panel scrollbar (Dark webpage scrollbar is in usercontent)*/
 #bookmarksPanel, #history-panel {
 	scrollbar-color: #838384 #454545 !important;
+}
+
+/* Draggable sidebar */
+#sidebar {
+    -moz-window-dragging: drag;
+}
+
+/* Color the background something other than pure black */
+body {
+    background-color: var(--primary-dark);
 }

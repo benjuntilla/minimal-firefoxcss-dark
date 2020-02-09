@@ -1,6 +1,6 @@
 /* Style active tab blue bar */
 .tabbrowser-tab {
-	--tab-line-color: #323234 !important;
+	--tab-line-color: var(--primary-dark) !important;
 }
 
 /* Active tab color */

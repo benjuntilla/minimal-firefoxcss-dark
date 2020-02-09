@@ -1,0 +1,53 @@
+/* Expand toolbar on hover */
+:root:not([customizing]) #nav-bar toolbarbutton {
+    margin-left: -28px !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    opacity: 0.5;
+    transition: margin-left 0.3s var(--animation-easing-function), opacity 0.3s !important;
+}
+:root:not([customizing]) :hover > #nav-bar toolbarbutton,
+:root:not([customizing]) :hover > #titlebar toolbarbutton,
+:root:not([customizing]) #nav-bar toolbarbutton[open=true],
+:root:not([customizing]) #titlebar toolbarbutton[open=true],
+:root:not([customizing]) #navigator-toolbox:focus-within #nav-bar toolbarbutton,
+:root:not([customizing]) .toolbaritem[animate=true], :root:not([customizing]) .toolbaritem[animate=true] > * {
+    margin-left: 0px !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    opacity: 1;
+}
+
+/* Remove borders */
+:root {
+    --tabs-border: transparent;
+}
+.tabbrowser-tab::after, .tabbrowser-tab::before {
+    border-left: none;
+}
+#urlbar, .searchbar-textbox {
+    border: none;
+    box-shadow: none;
+}
+#nav-bar {
+    margin-top: 0px;
+    border-top: 0px;
+    box-shadow: none ;
+}
+
+/* Hide addon buttons when browser window gets too small */
+#nav-bar-customization-target {
+    overflow: hidden !important;
+}
+
+/* Make urlbar semi-opaque when unfocused or unhovered */
+#urlbar {
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+#urlbar[focused=true] {
+    opacity:1;
+}
+#urlbar:hover {
+    opacity:1;
+}

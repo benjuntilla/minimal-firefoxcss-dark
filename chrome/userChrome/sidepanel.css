@@ -1,33 +1,33 @@
 /* General */
 #bookmarks-view, #historyTree, #history-panel, #sidebar-header, #sidebar {
-    background-color: #323234 !important;
-    color: #ccc !important;
+    background-color: var(--primary-dark) !important;
+    color: var(--primary-light) !important;
     border: 0px !important;
 }
 #bookmarks-view {
-    background-color: #323234 !important;
+    background-color: var(--primary-dark) !important;
     border: 0px !important;
 }
 #viewButton {
-    color: #aaa !important;
+    color: var(--primary-light) !important;
 }
 /* Thin splitter */
 #sidebar-splitter {
     width: 1px !important;
 }
-/* Dark sidebar searchbox (and resize) */
+/* Darken and resize sidebar searchbox */
 #sidebar-search-container textbox {
     -moz-appearance: none !important;
-    background-color: #464646 !important;
+    background-color: var(--secondary-dark) !important;
     color: #FFF !important;
     border: 0px !important;
     height: 30px !important;
 }
 /* Hide sidebar box border */
 #sidebar-search-container {
-    background-color: #313133 !important;
+    background-color: var(--primary-dark) !important;
 }
 /* Change folder icon color */
 .bookmark-item[container], treechildren::-moz-tree-image(container) {
-    fill: #aaa !important;
+    fill: var(--primary-light) !important;
 }
