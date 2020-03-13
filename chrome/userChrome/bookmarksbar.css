@@ -8,19 +8,6 @@
 /* Remove black line below bookmarks bar */
 #navigator-toolbox { border-bottom: 0px !important; }
 
-
-/* Multiline bookmarks; credit to: https://www.reddit.com/r/FirefoxCSS/comments/asxzhl/multirow_bookmark_toolbar/ */
-
-/* Enable multiline functionality */
-#PersonalToolbar {
-    min-height: unset !important;
-    max-height: unset !important;
-}
-#PersonalToolbar #PlacesToolbarItems {
-    overflow-x: visible !important;
-    overflow-y: visible !important;
-    display: inline-block !important;
-}
 /* Move favicons left */
 #PlacesToolbarItems > .bookmark-item > .toolbarbutton-icon[label]:not([label=""]) {
     margin-inline-start: -3px !important;
