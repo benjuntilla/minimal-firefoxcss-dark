@@ -1,94 +1,47 @@
-/* !!! */
-/* !!! MOVE THE TST SIDEBAR UP NEXT TO THE NAVBAR !!! */
-/* !!! */
-
-
-:root {
-    /*--sidebar-width: 40px;*/
-    --toolbar-height: -26px; /* (ch: what does this do ???) */
-    --menubar-height: -62px;
-    --toolmenubar-height: -88px; /* sum of previous two (ch: what does this do???) */
-}
-
-#main-window[title^="Firefox Developer Edition"] #PersonalToolbar {
-    visibility: visible !important;
-    margin-top: -1px !important;
-}
-
-/* lock sidebar to height by doing the inverse margin of the toolbar element */
+/* Make sidebar visible */
 #sidebar-box {
-    z-index: 1000 !important;
-    position: relative!important;
-    margin-top: var(--menubar-height) !important;
-    border-right: 1px solid #ccc;
+    z-index: 999 !important;
+    position: relative !important;
 }
-
-#main-window[title^="Firefox Developer Edition"] #sidebar-box {
-    margin-top: var(--toolmenubar-height) !important;
-}
-
-/* lock sidebar to specified width */
-#sidebar-box, #sidebar-box #sidebar {
-    min-width: var(--sidebar-width) !important;
-    max-width: var(--sidebar-width) !important;
-}
-
-/* hide sidebar header for tree style tabs sidebar */
-    #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header {
+/* Hide TST header */
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header {
     display: none;
 }
-
-/* hide normal horizontal tab bar */
-    #TabsToolbar { visibility: collapse; }
-
-
-/* !!! */
-/* !!! RESPONSIVE TST CSS !!! */
-/* !!! */
-
-
-/* Sidebar min and max width removal */
-#sidebar {
+/* Set sidebar widths */
+#sidebar-box, #sidebar-box #sidebar {
     max-width: none !important;
     min-width: 0px !important;
 }
+/* Move sidebar up */
 #sidebar-box {
-    margin-top: -70px !important;
+    margin-top: var(--tst-margin-top) !important;
 }
-
-/* Hide right vertical splitter when using Tree Style Tab. */
+/* Hide right vertical splitter when using TST. */
 #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] + #sidebar-splitter {
     display: none !important;
 }
-
-/* Hide sidebar header when using Tree Style Tab. */
-#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header {
-    visibility: collapse;
-}
-
-/* Collapse sidebar until hovered when using Tree Style Tab. */
-:root {
-    --thin-tab-width: 40px;
-    --wide-tab-width: 200px;
-}
+/* Collapse sidebar until hovered when using TST. */
 #sidebar-box:not([sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]) {
-    min-width: var(--wide-tab-width) !important;
+    min-width: var(--tst-max-width) !important;
     max-width: none !important;
     border-right-style: none;
 }
 #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] {
     position: relative !important;
     transition: all 300ms !important;
-    min-width: var(--thin-tab-width) !important;
-    max-width: var(--thin-tab-width) !important;
+    min-width: var(--tst-min-width) !important;
+    max-width: var(--tst-min-width) !important;
     border-right-style: none;
 }
 #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]:hover {
     transition: all 300ms !important;
-    min-width: var(--wide-tab-width) !important;
-    max-width: var(--wide-tab-width) !important;
+    min-width: var(--tst-max-width) !important;
+    max-width: var(--tst-max-width) !important;
     border-right-style: none;
-    
-    /* Negative right-margin to keep page from being pushed to the side. */
-    margin-right: calc((var(--wide-tab-width) - var(--thin-tab-width)) * -1) !important;
+    /* Keep webview from being pushed to the side. */
+    margin-right: calc((var(--tst-max-width) - var(--tst-min-width)) * -1) !important;
+}
+/* Make draggable */
+#sidebar {
+    -moz-window-dragging: drag;
 }

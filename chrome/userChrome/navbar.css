@@ -1,27 +1,29 @@
 /* Expand toolbar on hover */
-:root:not([customizing]) #nav-bar toolbarbutton {
+:root:not([customizing]) #nav-bar > toolbarbutton,
+:root:not([customizing]) #nav-bar > toolbaritem,
+:root:not([customizing]) #nav-bar-customization-target > toolbarbutton:not(.toolbarbutton-combined),
+:root:not([customizing]) #nav-bar-customization-target > toolbaritem:not(#urlbar-container):not(.toolbaritem-combined-buttons) {
+    transform: scaleX(0) !important;
     margin-left: -28px !important;
-    visibility: hidden !important;
     pointer-events: none !important;
     opacity: 0.5;
-    transition: margin-left 0.3s var(--animation-easing-function), opacity 0.3s !important;
+    transition: 
+        margin-left var(--animation-time) var(--animation-easing-function), 
+        transform var(--animation-time) var(--animation-easing-function), 
+        opacity var(--animation-time) 
+        !important;
 }
-:root:not([customizing]) :hover > #nav-bar toolbarbutton,
-:root:not([customizing]) :hover > #titlebar toolbarbutton,
-:root:not([customizing]) #nav-bar toolbarbutton[open=true],
-:root:not([customizing]) #titlebar toolbarbutton[open=true],
-:root:not([customizing]) #navigator-toolbox:focus-within #nav-bar toolbarbutton,
-:root:not([customizing]) .toolbaritem[animate=true], :root:not([customizing]) .toolbaritem[animate=true] > * {
+:root:not([customizing]) #nav-bar toolbarbutton[open],
+:root:not([customizing]) #nav-bar:hover toolbarbutton,
+:root:not([customizing]) #nav-bar:hover toolbaritem:not(#urlbar-container),
+:root:not([customizing]) #nav-bar:focus-within toolbarbutton,
+:root:not([customizing]) #nav-bar:focus-within toolbaritem:not(#urlbar-container) {
+    transform: scaleX(1) !important;
     margin-left: 0px !important;
-    visibility: visible !important;
     pointer-events: auto !important;
     opacity: 1;
 }
-
 /* Remove borders */
-:root {
-    --tabs-border: transparent;
-}
 .tabbrowser-tab::after, .tabbrowser-tab::before {
     border-left: none;
 }
@@ -30,24 +32,21 @@
     box-shadow: none;
 }
 #nav-bar {
-    margin-top: 0px;
     border-top: 0px;
-    box-shadow: none ;
+    box-shadow: none;
 }
-
-/* Hide addon buttons when browser window gets too small */
-#nav-bar-customization-target {
-    overflow: hidden !important;
-}
-
 /* Make urlbar semi-opaque when unfocused or unhovered */
 #urlbar {
     opacity: 0.5;
     transition: opacity 0.3s;
 }
-#urlbar[focused=true] {
-    opacity:1;
+#urlbar[focused] {
+    opacity: 1;
 }
 #urlbar:hover {
-    opacity:1;
+    opacity: 1;
+}
+/* Make room for window controls */
+#nav-bar {
+    margin-right: var(--window-control-width) !important;
 }

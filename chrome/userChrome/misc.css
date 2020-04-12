@@ -2,30 +2,26 @@
 browser[type="content-primary"], tabbrowser tabpanels, #appcontent > #content {
 	background-color: var(--primary-dark) !important;
 }
-
 /* Titlebar/button color */
 toolbar#TabsToolbar {
     -moz-appearance: none !important;
     background-color: var(--primary-dark) !important;
 }
-
 /* Search suggestions color */
 panel[type="autocomplete"],
 panel[type="autocomplete-richlistbox"],
 .autocomplete-history-popup {
-    background: #464648 !important;
-    border: #464648 !important;
+    background: var(--secondary-dark) !important;
+    border: var(--secondary-dark) !important;
 }
 .search-panel-header, .autocomplete-tree
 {
 	color: var(--primary-light) !important;
 }
-
 /* Remove blue border around url/search bars */
 #urlbar, .searchbar-textbox {
     border: none !important;
 }
-
 /* Style dialog popups */
 @-moz-document url("chrome://global/content/commonDialog.xul"){
 	#commonDialog {
@@ -33,18 +29,20 @@ panel[type="autocomplete-richlistbox"],
 		color: var(--primary-light) !important;
     }
 }
-
-/* Dark panel scrollbar (Dark webpage scrollbar is in usercontent)*/
+/* Dark UI scrollbar (Styling for dark website scrollbar located in usercontent)*/
 #bookmarksPanel, #history-panel {
-	scrollbar-color: #838384 #454545 !important;
+	scrollbar-color: var(--primary-light) var(--secondary-dark) !important;
 }
-
-/* Draggable sidebar */
-#sidebar {
-    -moz-window-dragging: drag;
-}
-
-/* Color the background something other than pure black */
+/* Style background color */
 body {
     background-color: var(--primary-dark);
+}
+/* Remove borders */
+:root {
+    --tabs-border: transparent;
+}
+/* Position incognito indicator */
+.private-browsing-indicator {
+    margin-bottom: -130px !important;
+    margin-right: -60px !important;
 }
