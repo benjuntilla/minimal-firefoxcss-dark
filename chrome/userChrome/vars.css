@@ -1,13 +1,22 @@
 :root {
-    --primary-dark: #323234;
+    /* Colors */
+    --primary-dark: #222222;
     --secondary-dark: #464646;
     --primary-light: #aaa;
     --secondary-light: #555555;
     --accent-dark: #1e1e1e;
     --accent-light: #3f3f3f;
-    --animation-time: 0.3s;
+
+    /* Background */
+    --primary-background: --primary-dark;
+    --secondary-background: #2b2b2b;
+
+    /* TST */
     --tst-margin-top: -70px;
     --tst-min-width: 40px;
     --tst-max-width: 200px;
+
+    /* Misc. */
     --window-control-width: 150px;
+    --animation-time: 0.3s;
 }

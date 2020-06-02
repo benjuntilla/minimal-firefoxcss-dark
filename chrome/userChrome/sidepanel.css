@@ -1,4 +1,4 @@
-/* General */
+/* Color stuff & remove borders */
 #bookmarks-view, #historyTree, #history-panel, #sidebar-header, #sidebar {
     background-color: var(--primary-dark) !important;
     color: var(--primary-light) !important;
@@ -11,10 +11,13 @@
 #viewButton {
     color: var(--primary-light) !important;
 }
-/* Thin splitter */
+
+/* Style splitter */
 #sidebar-splitter {
-    width: 1px !important;
+    width: 2px !important;
+    color: var(--accent-dark);
 }
+
 /* Darken and resize sidebar searchbox */
 #sidebar-search-container textbox {
     -moz-appearance: none !important;
@@ -23,10 +26,12 @@
     border: 0px !important;
     height: 30px !important;
 }
+
 /* Hide sidebar box border */
 #sidebar-search-container {
     background-color: var(--primary-dark) !important;
 }
+
 /* Change folder icon color */
 .bookmark-item[container], treechildren::-moz-tree-image(container) {
     fill: var(--primary-light) !important;

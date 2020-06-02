@@ -2,11 +2,13 @@
 #navigator-toolbox {
     -moz-window-dragging: drag;
 }
+
 /* Position tabs bar */
 #TabsToolbar {
     -moz-box-ordinal-group: 1 !important;
     visibility: collapse !important;
 }
+
 /* Position navbar and make room for tts sidebar */
 #nav-bar {
     -moz-box-ordinal-group: 2 !important;
@@ -14,6 +16,7 @@
     padding-left: var(--tst-min-width) !important;
     margin-top: 5px !important;
 }
+
 /* Position bookmark bar */
 #PersonalToolbar {
     -moz-box-ordinal-group: 3 !important;
@@ -22,6 +25,7 @@
     padding-bottom: 5px !important;
     -moz-window-dragging: drag;
 }
+
 /* Position window buttons */
 #TabsToolbar .titlebar-buttonbox-container {
     visibility: visible !important;

@@ -6,7 +6,7 @@
 /* Active tab color */
 .tab-background[selected="true"] {
     background-attachment: none !important;
-    background-color: #525254 !important;
+    background-color: var(--secondary-dark) !important;
     background-image: none !important;
 }
 
@@ -18,7 +18,7 @@
     display: -moz-box !important;
 }
 
-/* Underlines and dims unloaded tabs (Credit to josemam) */
+/* Underline & dim unloaded tabs */
 .tabbrowser-tab[pending] {
     font-style: italic;
 }
@@ -30,4 +30,9 @@ toolbarspring {
 /* Change tab max width */
 .tabbrowser-tab[fadein]:not([pinned]) {
     max-width: 300px !important;
+}
+
+/* Remove borders */
+:root {
+    --tabs-border: transparent;
 }

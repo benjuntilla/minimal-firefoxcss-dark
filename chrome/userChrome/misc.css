@@ -2,15 +2,9 @@
 browser[type="content-primary"], tabbrowser tabpanels, #appcontent > #content {
 	background-color: var(--primary-dark) !important;
 }
-/* Titlebar/button color */
-toolbar#TabsToolbar {
-    -moz-appearance: none !important;
-    background-color: var(--primary-dark) !important;
-}
-/* Search suggestions color */
-panel[type="autocomplete"],
-panel[type="autocomplete-richlistbox"],
-.autocomplete-history-popup {
+
+/* Color search suggestions */
+panel[type="autocomplete"], panel[type="autocomplete-richlistbox"], .autocomplete-history-popup {
     background: var(--secondary-dark) !important;
     border: var(--secondary-dark) !important;
 }
@@ -18,31 +12,45 @@ panel[type="autocomplete-richlistbox"],
 {
 	color: var(--primary-light) !important;
 }
-/* Remove blue border around url/search bars */
+
+/* Remove urlbar & searchbar border */
 #urlbar, .searchbar-textbox {
     border: none !important;
 }
+
 /* Style dialog popups */
-@-moz-document url("chrome://global/content/commonDialog.xul"){
+@-moz-document url("chrome://global/content/commonDialog.xul") {
 	#commonDialog {
 		background-color: var(--primary-dark) !important;
 		color: var(--primary-light) !important;
     }
 }
-/* Dark UI scrollbar (Styling for dark website scrollbar located in usercontent)*/
+
+/* Color scrollbar */
 #bookmarksPanel, #history-panel {
 	scrollbar-color: var(--primary-light) var(--secondary-dark) !important;
 }
-/* Style background color */
-body {
-    background-color: var(--primary-dark);
+
+/* Remove notification border */
+notification {
+    border-style: none !important;
 }
-/* Remove borders */
-:root {
-    --tabs-border: transparent;
+
+/* Hide "Did you mean to go to *" notifications */
+notification[value="keyword-uri-fixup"] {
+    display: none;
 }
-/* Position incognito indicator */
+
+/* Position private browsing indicator */
 .private-browsing-indicator {
     margin-bottom: -130px !important;
     margin-right: -60px !important;
+}
+
+/* Color main background */
+body {
+    background-color: var(--primary-dark);
+}
+#navigator-toolbox {
+    --toolbar-bgcolor: var(--primary-dark);
 }

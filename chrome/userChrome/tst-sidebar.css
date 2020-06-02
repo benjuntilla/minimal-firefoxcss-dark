@@ -3,45 +3,42 @@
     z-index: 999 !important;
     position: relative !important;
 }
+
 /* Hide TST header */
 #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header {
     display: none;
 }
+
 /* Set sidebar widths */
 #sidebar-box, #sidebar-box #sidebar {
     max-width: none !important;
     min-width: 0px !important;
 }
+
 /* Move sidebar up */
 #sidebar-box {
     margin-top: var(--tst-margin-top) !important;
 }
+
 /* Hide right vertical splitter when using TST. */
 #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] + #sidebar-splitter {
     display: none !important;
 }
+
 /* Collapse sidebar until hovered when using TST. */
 #sidebar-box:not([sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]) {
     min-width: var(--tst-max-width) !important;
     max-width: none !important;
-    border-right-style: none;
 }
 #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] {
     position: relative !important;
     transition: all 300ms !important;
     min-width: var(--tst-min-width) !important;
     max-width: var(--tst-min-width) !important;
-    border-right-style: none;
 }
 #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]:hover {
-    transition: all 300ms !important;
     min-width: var(--tst-max-width) !important;
     max-width: var(--tst-max-width) !important;
-    border-right-style: none;
     /* Keep webview from being pushed to the side. */
     margin-right: calc((var(--tst-max-width) - var(--tst-min-width)) * -1) !important;
-}
-/* Make draggable */
-#sidebar {
-    -moz-window-dragging: drag;
 }

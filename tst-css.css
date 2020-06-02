@@ -1,24 +1,37 @@
-.tab.unread .label { font-weight: bold !important; }
-
-.tab:not(:hover) > .closebox { display: none; }
-
-.closebox:hover { font-weight: 900; }
-
-.tab, .tabs, body, #background {
-	background: #323234;
-	margin-top: 1px;
+:root {
+	--primary-background: #222222;
+	--accent-dark: #1e1e1e;
 }
 
-
-/* Hide border on tab bar, force its state to 'scroll', adjust margin-left for width of scrollbar. */ 
-#tabbar { border: 0; overflow-y: scroll !important; margin-left: -10px !important; }
+.tab.unread .label { 
+	font-weight: bold !important; 
+}
+.tab:not(:hover) > .closebox { 
+	display: none; 
+}
+.closebox:hover { 
+	font-weight: 900; 
+}
+.tab, .tabs, body, #background {
+	background: #303030;
+}
+#tabbar {
+	border-right: 2px solid #1e1e1e;
+	box-shadow: none !important;
+}
+.tab.muted {
+	opacity: 0.5;
+}
+#tabbar { 
+	overflow-y: scroll !important; 
+	margin-left: -10px !important; 
+}
 
 /* Hide new tab button when collapsed & adjust margins */
 body .newtab-button {
 	visibility: none;
 	opacity: 0;
 	transition: visibility 0s, opacity .5s linear;
-
 	margin-top: 5px;
 }
 body:hover .newtab-button {
@@ -37,7 +50,7 @@ body:hover .label {
 	opacity: 1;
 }
 
-/* Hide .twisty & move favicons left when collapsed */
+/* Hide arrow & move favicons left when collapsed */
 body .tab .twisty {
 	visibility: hidden;
 	opacity: 0;
@@ -50,9 +63,7 @@ body:hover .tab .twisty {
 	margin-left: 0px;
 }
 
-/* ####################### */
-/* ##### COLOR THEME #####*/
-/* ####################### */
+/* Animations */
 @keyframes spin {
 	0% {
 		transform: rotate(0deg);
@@ -75,43 +86,8 @@ body:hover .tab .twisty {
 		left: calc(50% - 175px);
 	}
 }
-:root {
-	background-color: #383838;
-}
-#tabbar {
-	border-right: 1px solid #1d1d1d;
-	box-shadow: none !important;
-}
 
-/* Commented to allow tree colored tabs to do its work */
-/*
-.tab {
-	background-color: transparent;
-	border-color: #292929;
-	color: rgba(207,207,207,0.75);
-	box-shadow: none !important;
-}
-.tab:hover {
-	background-color: #404040 !important;
-	color: rgba(207,207,207,1) !important;
-}
-.tab.discarded {
-	background-color: #1d1d1d;
-	color: #383838 !important;
-}
-.tab.discarded:hover {
-	background-color: #292929 !important;
-}
-
-.tab.active {
-	background-color: #525254;
-}
-.tab.active:hover {
-	background-color: #525254 !important;
-}
-*/
-
-/* Adjust style for tab that has sound playing. */
+/* Style tabs w/ sound */
 .tab.sound-playing .favicon::after {
 	content: '';
 	position: absolute;
@@ -122,9 +98,4 @@ body:hover .tab .twisty {
 	animation: pulse 2s ease-out 0s infinite;
 	z-index: -1;
 	opacity: 0;
-}
-
-/* Adjust style for tab that is muted. */
-.tab.muted {
-	opacity: 0.5;
 }

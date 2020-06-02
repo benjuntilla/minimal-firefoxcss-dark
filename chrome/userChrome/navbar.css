@@ -23,6 +23,7 @@
     pointer-events: auto !important;
     opacity: 1;
 }
+
 /* Remove borders */
 .tabbrowser-tab::after, .tabbrowser-tab::before {
     border-left: none;
@@ -35,6 +36,7 @@
     border-top: 0px;
     box-shadow: none;
 }
+
 /* Make urlbar semi-opaque when unfocused or unhovered */
 #urlbar {
     opacity: 0.5;
@@ -46,6 +48,7 @@
 #urlbar:hover {
     opacity: 1;
 }
+
 /* Make room for window controls */
 #nav-bar {
     margin-right: var(--window-control-width) !important;

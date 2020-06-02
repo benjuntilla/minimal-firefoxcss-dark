@@ -1,20 +1,22 @@
-/*Top border*/
+/* Style top border */
 .browserContainer > findbar {
     border-top: 1px solid var(--grey-80) !important;
 }
-/* Change buttons */
+
+/* Style buttons */
 .findbar-find-previous, .findbar-find-next {
     border: none !important;
     background: none !important;
     border-radius: 2px !important;
     fill: #FFF !important;
 }
+
 /* Fix spacing */
 .findbar-find-previous {
-  margin-left: 6px !important;
+    margin-left: 6px !important;
 }
-/* Buttons on hover */
-.findbar-find-previous:hover,
-.findbar-find-next:hover {
-  background: var(--toolbarbutton-hover-background) !important;
+
+/* Style buttons on hover */
+.findbar-find-previous:hover, .findbar-find-next:hover {
+	background: var(--toolbarbutton-hover-background) !important;
 }

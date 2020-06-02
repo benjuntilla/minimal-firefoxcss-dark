@@ -1,19 +1,12 @@
-/* Style text */
 .toolbarbutton-text {
     color: var(--primary-light) !important;
 }
-.toolbarbutton-text { text-shadow: none !important; }
-/* .toolbarbutton-text { text-shadow: none !important; } */
-
-/* Remove black line below bookmarks bar */
-#navigator-toolbox { border-bottom: 0px !important; }
+#PlacesToolbarItems > .bookmark-item {
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+}
 
 /* Move favicons left */
 #PlacesToolbarItems > .bookmark-item > .toolbarbutton-icon[label]:not([label=""]) {
     margin-inline-start: -3px !important;
-}
-/* add more padding */
-#PlacesToolbarItems > .bookmark-item {
-    padding-top: 2px !important;
-    padding-bottom: 2px !important;
 }
