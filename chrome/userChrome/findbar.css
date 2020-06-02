@@ -1,13 +1,14 @@
-/* Style top border */
+/* Style top border & color background */
 .browserContainer > findbar {
-    border-top: 1px solid var(--grey-80) !important;
+    border-top: var(--border-width) solid var(--grey-80) !important;
+    background: var(--primary-background) !important;
 }
 
 /* Style buttons */
 .findbar-find-previous, .findbar-find-next {
     border: none !important;
     background: none !important;
-    border-radius: 2px !important;
+    border-radius: var(--border-width) !important;
     fill: #FFF !important;
 }
 

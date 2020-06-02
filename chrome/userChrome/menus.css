@@ -1,9 +1,9 @@
 /* Menu font color */
 menuitem:not([disabled=true]), menu {
-    color: var(--primary-light) !important
+    color: var(--text) !important
 }
 menuitem[disabled=true] {
-    color: var(--secondary-light) !important;
+    color: var(--text-disabled) !important;
 }
 
 /* Menu background color */
@@ -18,17 +18,17 @@ menuseparator {
 
 /* Menu items color */
 menu, menuitem {
-    background-color: var(--primary-dark) !important;
+    background-color: var(--primary-background) !important;
 }
 menu:hover, menuitem:hover {
-    background-color: var(--secondary-light) !important;
+    background-color: var(--primary-background-hover) !important;
 }
 
 /* Color panael footers & remove border */
 .panel-subview-footer, .panel-footer > button {
-    background-color: var(--accent-dark) !important;
+    background-color: var(--accent) !important;
     border-style: none !important;
 }
 .panel-subview-footer:hover, .panel-footer > button:hover {
-    background-color: var(--accent-light) !important;
+    background-color: var(--accent-hover) !important;
 }

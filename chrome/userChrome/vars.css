@@ -1,15 +1,13 @@
 :root {
     /* Colors */
-    --primary-dark: #222222;
-    --secondary-dark: #464646;
-    --primary-light: #aaa;
-    --secondary-light: #555555;
-    --accent-dark: #1e1e1e;
-    --accent-light: #3f3f3f;
-
-    /* Background */
-    --primary-background: --primary-dark;
+    --primary-background: #222222;
+    --primary-background-hover: #555555;
     --secondary-background: #2b2b2b;
+    --tertiary-background: #303030;
+    --text: #aaa;
+    --text-disabled: #555555;
+    --accent: #1e1e1e;
+    --accent-hover: #3f3f3f;
 
     /* TST */
     --tst-margin-top: -70px;
@@ -19,4 +17,6 @@
     /* Misc. */
     --window-control-width: 150px;
     --animation-time: 0.3s;
+    --border-width: 2px;
+    --bookmarks-bar-height: 25px;
 }

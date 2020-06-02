@@ -24,7 +24,7 @@
     opacity: 1;
 }
 
-/* Remove borders */
+/* Remove borders & shadows */
 .tabbrowser-tab::after, .tabbrowser-tab::before {
     border-left: none;
 }
@@ -33,14 +33,14 @@
     box-shadow: none;
 }
 #nav-bar {
-    border-top: 0px;
+    border: none;
     box-shadow: none;
 }
 
 /* Make urlbar semi-opaque when unfocused or unhovered */
 #urlbar {
     opacity: 0.5;
-    transition: opacity 0.3s;
+    transition: opacity var(--animation-time);
 }
 #urlbar[focused] {
     opacity: 1;
@@ -52,4 +52,9 @@
 /* Make room for window controls */
 #nav-bar {
     margin-right: var(--window-control-width) !important;
+}
+
+/* Color megabar */
+#urlbar-background {
+    background: var(--tertiary-background) !important;
 }

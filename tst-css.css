@@ -1,6 +1,24 @@
 :root {
-	--primary-background: #222222;
-	--accent-dark: #1e1e1e;
+    /* Colors */
+    --primary-background: #222222;
+    --primary-background-hover: #555555;
+    --secondary-background: #2b2b2b;
+    --tertiary-background: #303030;
+    --text: #aaa;
+    --text-disabled: #555555;
+    --accent: #1e1e1e;
+    --accent-hover: #3f3f3f;
+
+    /* TST */
+    --tst-margin-top: -70px;
+    --tst-min-width: 40px;
+    --tst-max-width: 200px;
+
+    /* Misc. */
+    --window-control-width: 150px;
+    --animation-time: 0.3s;
+    --border-width: 2px;
+    --bookmarks-bar-height: 25px;
 }
 
 .tab.unread .label { 
@@ -13,10 +31,10 @@
 	font-weight: 900; 
 }
 .tab, .tabs, body, #background {
-	background: #303030;
+	background: var(--secondary-background);
 }
 #tabbar {
-	border-right: 2px solid #1e1e1e;
+	border-right: var(--border-width) solid var(--accent);
 	box-shadow: none !important;
 }
 .tab.muted {

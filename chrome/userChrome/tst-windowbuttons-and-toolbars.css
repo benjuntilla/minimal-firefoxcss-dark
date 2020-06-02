@@ -12,7 +12,7 @@
 /* Position navbar and make room for tts sidebar */
 #nav-bar {
     -moz-box-ordinal-group: 2 !important;
-    border: 0px !important;
+    border: none !important;
     padding-left: var(--tst-min-width) !important;
     margin-top: 5px !important;
 }

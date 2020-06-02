@@ -1,12 +1,27 @@
 .toolbarbutton-text {
-    color: var(--primary-light) !important;
+    color: var(--text) !important;
 }
 #PlacesToolbarItems > .bookmark-item {
     padding-top: 2px !important;
     padding-bottom: 2px !important;
 }
 
+/* Collapse when unfocused */
+#PersonalToolbar:not([customizing]) {
+    margin-bottom: calc(var(--bookmarks-bar-height) * -1);
+    transform: rotateX(90deg);
+    transform-origin: top;
+    transition: transform var(--animation-time) !important;
+    z-index: 1;
+}
+#navigator-toolbox:hover #PersonalToolbar,
+#navigator-toolbox:focus-within #PersonalToolbar {
+    transform: rotateX(0);
+}
+
 /* Move favicons left */
-#PlacesToolbarItems > .bookmark-item > .toolbarbutton-icon[label]:not([label=""]) {
+#PlacesToolbarItems
+    > .bookmark-item
+    > .toolbarbutton-icon[label]:not([label=""]) {
     margin-inline-start: -3px !important;
 }
