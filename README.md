@@ -1,5 +1,5 @@
 # minimal-firefoxcss-dark
-![preview](https://j.gifs.com/P7wZpW.gif)
+![preview](preview.gif)
 
 A collection of configurable CSS files that transforms Firefox into a responsive, minimal, and functional browser.
 
