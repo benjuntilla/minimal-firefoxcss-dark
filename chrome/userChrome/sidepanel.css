@@ -11,6 +11,9 @@
 #viewButton {
     color: var(--text) !important;
 }
+#sidebar-box {
+    background-color: var(--secondary-background) !important;
+}
 
 /* Style splitter */
 #sidebar-splitter {
@@ -35,9 +38,4 @@
 /* Change folder icon color */
 .bookmark-item[container], treechildren::-moz-tree-image(container) {
     fill: var(--text) !important;
-}
-
-/* Make room for collapsible bookmarks bar */
-#sidebar-box {
-    padding-top: var(--bookmarks-bar-height) !important;
 }

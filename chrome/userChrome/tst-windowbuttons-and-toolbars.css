@@ -14,7 +14,9 @@
     -moz-box-ordinal-group: 2 !important;
     border: none !important;
     padding-left: var(--tst-min-width) !important;
-    margin-top: 5px !important;
+}
+:root:not([inFullscreen]) #nav-bar {
+    margin-top: calc(var(--title-bar-height) * -1 + var(--top-drag-space));
 }
 
 /* Position bookmark bar */
@@ -26,13 +28,35 @@
     -moz-window-dragging: drag;
 }
 
-/* Position window buttons */
+/* Hide second set of window controls */
 #TabsToolbar .titlebar-buttonbox-container {
-    visibility: visible !important;
-    position: absolute !important;
-    display: block !important;
-    top: 0 !important;
-    right: 0 !important;
-    margin-top: 5px !important;
-    margin-right: -5px !important;
+    visibility: collapse !important;
+}
+
+/* Style menubar */
+#toolbar-menubar {
+    min-height: unset !important;
+    height: var(--title-bar-height) !important;
+    position: relative;
+    margin-left: var(--tst-min-width) !important;
+}
+#main-menubar {
+    -moz-box-flex: 1;
+    background-color: var(--toolbar-bgcolor,--toolbar-non-lwt-bgcolor);
+    background-clip: padding-box;
+    border-right: 30px solid transparent;
+    border-image: linear-gradient(
+            to left,
+            transparent,
+            var(--toolbar-bgcolor,--toolbar-non-lwt-bgcolor) 30px
+        )
+        20 / 30px;
+}
+#toolbar-menubar:not([inactive]) {
+    z-index: 999;
+}
+#toolbar-menubar[inactive] > #menubar-items {
+    opacity: 0;
+    pointer-events: none;
+    margin-left: var(--uc-window-drag-space-width, 0px);
 }

@@ -17,7 +17,7 @@
 
 /* Move sidebar up */
 #sidebar-box {
-    margin-top: var(--tst-margin-top) !important;
+    margin-top: calc((var(--bookmarks-bar-height) + var(--title-bar-height)) * -1 + var(--tst-margin-top-offset));
 }
 
 /* Hide right vertical splitter when using TST. */

@@ -10,13 +10,19 @@
     --accent-hover: #3f3f3f;
 
     /* TST */
-    --tst-margin-top: -70px;
+    --tst-margin-top-offset: 20px;
     --tst-min-width: 40px;
     --tst-max-width: 200px;
 
-    /* Misc. */
+    /* Window controls */
     --window-control-width: 150px;
+    --window-control-margin-right: -5px;
+    --window-control-margin-top: 5px;
+
+    /* Misc. */
+    --top-drag-space: 5px;
     --animation-time: 0.3s;
     --border-width: 2px;
     --bookmarks-bar-height: 25px;
+    --title-bar-height: 38px;
 }
