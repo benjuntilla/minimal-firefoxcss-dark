@@ -8,9 +8,12 @@ A collection of configurable CSS files that transforms Firefox into a responsive
 If you decide not to use these addons, you can either remove files with the "tst" prefix from `userChrome.css` or delete them.
 
 ## Installation
-* In Firefox's preferences, ensure that the native dark theme is enabled, preferably on compact mode.
+* In the Firefox customization screen, ensure that the theme is set to dark, the density set to compact, and the title bar disabled.
 * Put `userChrome.css` and `userChrome` in your Firefox profile root's `chrome` directory.
 * In your Tree Style Tab preferences, change the theme to Vertigo and paste the contents of `tst-css.css` into Advanced > Extra style rules.
+* If you're using [TST Colored Tabs](https://addons.mozilla.org/en-US/firefox/addon/tst-colored-tabs/) as well, you can use the following settings for a more suitable color palette:
+
+![settings](tst-settings.jpg) 
 
 ## Configuration
 Modify `vars.css` to suit your specific needs. Differences from varying window buttons sizes to color preferences can be accomodated for. To apply these changes to TST, you can copy + paste the variables into `tst-css.css`.
