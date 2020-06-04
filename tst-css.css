@@ -10,15 +10,17 @@
     --accent-hover: #3f3f3f;
 
     /* TST */
-    --tst-margin-top: -70px;
+    --tst-margin-top-offset: 20px;
     --tst-min-width: 40px;
     --tst-max-width: 200px;
 
     /* Misc. */
     --window-control-width: 150px;
+    --top-drag-space: 5px;
     --animation-time: 0.3s;
     --border-width: 2px;
     --bookmarks-bar-height: 25px;
+    --title-bar-height: 38px;
 }
 
 .tab.unread .label { 

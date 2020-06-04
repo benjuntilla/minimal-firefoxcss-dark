@@ -14,12 +14,8 @@
     --tst-min-width: 40px;
     --tst-max-width: 200px;
 
-    /* Window controls */
-    --window-control-width: 150px;
-    --window-control-margin-right: -5px;
-    --window-control-margin-top: 5px;
-
     /* Misc. */
+    --window-control-width: 150px;
     --top-drag-space: 5px;
     --animation-time: 0.3s;
     --border-width: 2px;
