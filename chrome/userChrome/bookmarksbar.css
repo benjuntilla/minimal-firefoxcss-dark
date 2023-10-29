@@ -5,31 +5,3 @@
     padding-top: 2px !important;
     padding-bottom: 2px !important;
 }
-
-/* Collapse when unfocused */
-#PersonalToolbar:not([customizing]) {
-    position: relative;
-    margin-bottom: calc(var(--bookmarks-bar-height) * -1);
-    transform: rotateX(90deg);
-    transform-origin: top;
-    transition: transform var(--animation-time) !important;
-    z-index: 1;
-}
-#PlacesToolbarItems > .bookmark-item {
-    padding-block: 4 !important;
-}
-/* Show when urlbar is focused */
-#nav-bar:focus-within + #PersonalToolbar {
-    transform: rotateX(0);
-}
-/* Show when cursor is over the toolbar area */
-#navigator-toolbox:hover > #PersonalToolbar {
-    transform: rotateX(0);
-}
-
-/* Move favicons left */
-#PlacesToolbarItems
-    > .bookmark-item
-    > .toolbarbutton-icon[label]:not([label=""]) {
-    margin-inline-start: -3px !important;
-}

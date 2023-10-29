@@ -1,29 +1,3 @@
-/* Expand toolbar on hover */
-:root:not([customizing]) #nav-bar > toolbarbutton,
-:root:not([customizing]) #nav-bar > toolbaritem,
-:root:not([customizing]) #nav-bar-customization-target > toolbarbutton:not(.toolbarbutton-combined),
-:root:not([customizing]) #nav-bar-customization-target > toolbaritem:not(#urlbar-container):not(.toolbaritem-combined-buttons) {
-    transform: scaleX(0) !important;
-    margin-left: -28px !important;
-    pointer-events: none !important;
-    opacity: 0.5;
-    transition: 
-        margin-left var(--animation-time) var(--animation-easing-function), 
-        transform var(--animation-time) var(--animation-easing-function), 
-        opacity var(--animation-time) 
-        !important;
-}
-:root:not([customizing]) #nav-bar toolbarbutton[open],
-:root:not([customizing]) #nav-bar:hover toolbarbutton,
-:root:not([customizing]) #nav-bar:hover toolbaritem:not(#urlbar-container),
-:root:not([customizing]) #nav-bar:focus-within toolbarbutton,
-:root:not([customizing]) #nav-bar:focus-within toolbaritem:not(#urlbar-container) {
-    transform: scaleX(1) !important;
-    margin-left: 0px !important;
-    pointer-events: auto !important;
-    opacity: 1;
-}
-
 /* Remove borders & shadows */
 .tabbrowser-tab::after, .tabbrowser-tab::before {
     border-left: none;
@@ -47,11 +21,6 @@
 }
 #urlbar:hover {
     opacity: 1;
-}
-
-/* Make room for window controls */
-#nav-bar {
-    margin-right: var(--window-control-width) !important;
 }
 
 /* Color megabar */
