@@ -9,11 +9,10 @@
     visibility: collapse !important;
 }
 
-/* Position navbar and make room for tts sidebar */
+/* Position navbar */
 #nav-bar {
     -moz-box-ordinal-group: 2 !important;
     border: none !important;
-    padding-left: var(--tst-min-width) !important;
 }
 :root:not([inFullscreen]) #nav-bar {
     margin-top: calc(var(--title-bar-height) * -1 + var(--top-drag-space));
@@ -22,7 +21,6 @@
 /* Position bookmark bar */
 #PersonalToolbar {
     -moz-box-ordinal-group: 3 !important;
-    padding-left: calc(var(--tst-min-width) + 10px) !important;
     padding-top: 5px !important;
     padding-bottom: 5px !important;
     -moz-window-dragging: drag;

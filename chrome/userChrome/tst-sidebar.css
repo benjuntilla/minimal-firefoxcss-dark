@@ -4,8 +4,8 @@
     position: relative !important;
 }
 
-/* Hide TST header */
-#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header {
+/* Hide sidebery header */
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] #sidebar-header {
     display: none;
 }
 
@@ -15,28 +15,23 @@
     min-width: 0px !important;
 }
 
-/* Move sidebar up */
-#sidebar-box {
-    margin-top: calc((var(--bookmarks-bar-height) + var(--title-bar-height)) * -1 + var(--tst-margin-top-offset));
-}
-
 /* Hide right vertical splitter when using TST. */
-#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] + #sidebar-splitter {
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] + #sidebar-splitter {
     display: none !important;
 }
 
 /* Collapse sidebar until hovered when using TST. */
-#sidebar-box:not([sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]) {
+#sidebar-box:not([sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]) {
     min-width: var(--tst-max-width) !important;
     max-width: none !important;
 }
-#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] {
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] {
     position: relative !important;
     transition: all var(--animation-time) !important;
     min-width: var(--tst-min-width) !important;
     max-width: var(--tst-min-width) !important;
 }
-#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]:hover {
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:hover {
     min-width: var(--tst-max-width) !important;
     max-width: var(--tst-max-width) !important;
     /* Keep webview from being pushed to the side. */
